@@ -1,3 +1,9 @@
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+    game.over(false)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    game.over(false)
+})
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -239,3 +245,7 @@ mySprite3.setVelocity(50, 50)
 mySprite3.setFlag(SpriteFlag.StayInScreen, true)
 mySprite4.setFlag(SpriteFlag.StayInScreen, true)
 mySprite5.setFlag(SpriteFlag.StayInScreen, true)
+mySprite3.setBounceOnWall(true)
+mySprite4.setBounceOnWall(true)
+mySprite5.setBounceOnWall(true)
+game.showLongText("Survive for as long as possible", DialogLayout.Bottom)
